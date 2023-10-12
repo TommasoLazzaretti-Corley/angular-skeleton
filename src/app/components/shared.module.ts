@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
+import { LoaderComponent } from "./loader/loader.component";
 
 const exportedComponents = [
   HeaderComponent,
-  FooterComponent
+  FooterComponent,
+  LoaderComponent
 ];
 const exportedModules = [
   ReactiveFormsModule,
