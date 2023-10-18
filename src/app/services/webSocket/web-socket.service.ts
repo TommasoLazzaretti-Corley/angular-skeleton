@@ -11,6 +11,7 @@ const WS_ENDPOINT = 'environment.WEBSOCKET_ENDPOINT';
   providedIn: 'root'
 })
 export class WebSocketService {
+  // @ts-ignore
   private socket$: WebSocketSubject<void>;
   private messageReceivedSubject: Subject<any> = new Subject<any>();
   private refreshTimer: Subscription | null = null;

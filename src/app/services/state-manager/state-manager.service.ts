@@ -1,4 +1,4 @@
-import { computed, Injectable, signal, Signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 
 export interface AppState {
   data: {},
@@ -16,11 +16,8 @@ export class StateManager {
   error = computed(() => this.appState().error);
 
   setState(newState: Partial<AppState>) {
-    console.log("sono nel setState")
     this.appState.update((state) => {
-      console.log("sono nel update - con state = a ", this.appState())
       return { ...state, ...newState }
     });
-    console.log("finito nel update - con state = a ", this.appState())
   }
 }
