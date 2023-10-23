@@ -24,6 +24,7 @@ export class ModalComponent {
   }
 
   onClose() {
+    this.showModal = false;
     this.closeModal();
   }
 
