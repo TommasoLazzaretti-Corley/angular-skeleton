@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-skeleton';
+
+  showModal = false;
+
+  onContinue() {
+    // Gestisci l'azione di continuazione qui
+  }
+
+  onCancel() {
+    // Gestisci l'azione di cancellazione qui
+  }
+
+  customAction() {
+    // Gestisci l'azione personalizzata qui
+  }
 }

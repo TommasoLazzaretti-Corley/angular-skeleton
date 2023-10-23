@@ -8,4 +8,11 @@
 
   <app-footer></app-footer>
 
+  <app-modal [showModal]="showModal" title="Modal Title" (continueClicked)="onContinue()" (cancelClicked)="onCancel()">
+    <p>This is a custom <strong>HTML</strong> content.</p>
+    <button (click)="customAction()">Custom Action</button>
+  </app-modal>
+
+  <button (click)="showModal = true">modale</button>
+
 </div>
