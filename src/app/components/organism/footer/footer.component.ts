@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { BaseComponent } from "../../utilities/base-component";
+import { BaseComponent } from "../../../utilities/base-component";
 
 @Component({
   selector: 'app-footer',
