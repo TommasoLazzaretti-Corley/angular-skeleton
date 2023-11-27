@@ -3,6 +3,7 @@ import { computed, Injectable, signal } from '@angular/core';
 export interface AppState {
   data: {},
   isLoading: boolean,
+  user?: object | null,
   error?: string,
 }
 

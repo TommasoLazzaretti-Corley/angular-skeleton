@@ -4,18 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from "./organism/header/header.component";
 import { FooterComponent } from "./organism/footer/footer.component";
-import { LoaderComponent } from "./loader/loader.component";
+import { LoaderComponent } from "./atoms/loader/loader.component";
 import { ModalComponent } from "./molecules/modal/modal.component";
 import { LottieAnimationComponent } from './atoms/lottie-animation/lottie-animation.component';
 import { LottieComponent } from "ngx-lottie";
+import { ButtonComponent } from "./atoms/button/button.component";
 
 const exportedComponents = [
   HeaderComponent,
   FooterComponent,
   LoaderComponent,
   ModalComponent,
-  LottieAnimationComponent
+  LottieAnimationComponent,
+  ButtonComponent
 ];
+
 const exportedModules = [
   ReactiveFormsModule,
   FormsModule,
@@ -37,5 +40,4 @@ const exportedModules = [
   ],
   providers: [],
 })
-export class SharedModule {
-}
+export class SharedModule {}
