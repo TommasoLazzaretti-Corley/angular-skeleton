@@ -1,18 +1,28 @@
-<div>
+<app-header></app-header>
 
-  <app-header></app-header>
+<div>
 
   <h1> TEMPLATE ANGULAR </h1>
 
   <router-outlet></router-outlet>
 
-  <app-footer></app-footer>
-
-  <app-modal [showModal]="showModal" title="Modal Title" (continueClicked)="onContinue()" (cancelClicked)="onCancel()">
-    <p>This is a custom <strong>HTML</strong> content.</p>
-    <button (click)="customAction()">Custom Action</button>
-  </app-modal>
-
-  <button (click)="showModal = true">modale</button>
+  <app-button (onClickEvent)="showModal = true">
+    apri la modale
+  </app-button>
 
 </div>
+
+<app-modal [showModal]="showModal" title="Modal Title" (continueClicked)="onContinue()" (onCloseEvent)="onCancel()">
+  <p>This is a custom <strong>HTML</strong> content.</p>
+
+  <app-button (onClickEvent)="customAction()">
+    label come parametro
+  </app-button>
+
+</app-modal>
+
+<div *ngIf="stateManager.isLoading()">
+  <app-loader></app-loader>
+</div>
+
+<app-footer></app-footer>

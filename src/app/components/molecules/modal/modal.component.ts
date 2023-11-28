@@ -9,14 +9,8 @@ import { Component, EventEmitter, HostListener, Input, Output, ViewEncapsulation
 export class ModalComponent {
   @Input() title: string = '';
   @Input() showModal: boolean = false;
-  @Output() continueClicked = new EventEmitter();
-  @Output() cancelClicked = new EventEmitter();
-  @Output() closed = new EventEmitter();
-
-  onCancel() {
-    this.cancelClicked.emit();
-    this.closeModal();
-  }
+  @Output() continueClicked: EventEmitter<any> = new EventEmitter();
+  @Output() onCloseEvent: EventEmitter<any> = new EventEmitter();
 
   onContinue() {
     this.continueClicked.emit();
@@ -24,7 +18,6 @@ export class ModalComponent {
   }
 
   onClose() {
-    this.showModal = false;
     this.closeModal();
   }
 
@@ -33,7 +26,7 @@ export class ModalComponent {
   }
 
   closeModal() {
-    this.closed.emit();
+    this.onCloseEvent.emit(false);
   }
 
   @HostListener('document:keydown.escape', ['$event'])

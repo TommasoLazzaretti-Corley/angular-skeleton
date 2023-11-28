@@ -11,12 +11,6 @@ export class HomeComponent extends BaseComponent {
 
   constructor(private stateService: StateManager) {
     super();
-
-    this.showLoader()
-
-    effect(() => {
-      console.log('state changed', this.stateService.appState());
-    });
   }
 
 }
