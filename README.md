@@ -1,27 +1,27 @@
 # AngularSkeleton
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+L’idea di avere una architettura che funga da scheletro per i vari progetti in Angular nasce dall’esigenza di avere un punto di partenza solido e strutturato per lo sviluppo dei vostri progetti, con l'obiettivo di accelerare il processo di sviluppo, migliorare la coerenza e promuovere le migliori pratiche.
 
-## Development server
+### L'Importanza di un Punto di Partenza
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Lo sviluppo di progetti Angular può essere un compito complesso e laborioso, con numerose decisioni architetturali da prendere fin dall'inizio. Tuttavia, grazie al nostro boilerplate, forniamo un'infrastruttura di base che riduce notevolmente il carico di lavoro iniziale. Questo punto di partenza vi permette di concentrarvi sulle funzionalità specifiche del vostro progetto, anziché dover reinventare la ruota ad ogni avvio.
 
-## Code scaffolding
+### Utilities Incorporate
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Il nostro boilerplate include una serie di utilities già incorporate per semplificare lo sviluppo e migliorare l'efficienza. Ecco un elenco delle principali utilities che troverete già integrate:
 
-## Build
+- **httpService:** Questo servizio gestisce le chiamate API con il protocollo HTTP, semplificando l'interazione con i servizi di backend.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Websocket Service:** Gestisce la connessione WebSocket per le applicazioni in tempo reale, consentendo la comunicazione bidirezionale tra il frontend e il backend.
 
-## Running unit tests
+- **State Manager Service:** Questo servizio gestisce lo stato dell'applicazione, aiutando a mantenere le informazioni condivise in modo coeso in tutta l'applicazione.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Cookie Service:** Questo servizio si occupa delle informazioni dei cookie del browser, consentendo la gestione delle informazioni di sessione in modo sicuro.
 
-## Running end-to-end tests
+- **Cognito Service:** Questo servizio si occupa di gestire la connessione verso Cognito, c'è la possibilità di importare direttamente nell'APP.module tutte le info necessarie al suo funzionamento.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Sistema di Loading Applicativo:** Fornisce un sistema di loading preconfigurato e facilmente fruibile per migliorare l'esperienza dell'utente durante il caricamento dei dati o delle pagine.
 
-## Further help
+- **Routing Applicativo:** Il boilerplate include un routing preconfigurato che semplifica la gestione delle diverse viste dell'applicazione.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Infrastruttura a Microcomponenti:** La nostra architettura promuove la suddivisione dell'applicazione in microcomponenti, migliorando la manutenibilità e la scalabilità.
