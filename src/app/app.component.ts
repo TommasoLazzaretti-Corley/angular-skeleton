@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { initFlowbite } from 'flowbite';
+import { BaseComponent } from "./utilities/base-component";
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,13 @@ import { initFlowbite } from 'flowbite';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit {
+export class AppComponent extends BaseComponent implements OnInit {
   title = 'angular-skeleton';
-
   showModal = false;
+
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
     initFlowbite();

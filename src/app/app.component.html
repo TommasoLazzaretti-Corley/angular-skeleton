@@ -14,6 +14,8 @@
 </div>
 <app-footer></app-footer>
 
+<app-loader *ngIf="stateManager.isLoading()"></app-loader>
+
 <app-modal [showModal]="showModal" title="Modal Title" (continueClicked)="onContinue()" (onCloseEvent)="onCancel()">
   <p>This is a custom <strong>HTML</strong> content.</p>
 

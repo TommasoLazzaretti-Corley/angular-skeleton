@@ -1,22 +1,24 @@
-import { Component, effect } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { StateManager } from "../../services/state-manager/state-manager.service";
 import { BaseComponent } from "../../utilities/base-component";
+import { timeout } from "rxjs";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent extends BaseComponent {
 
   constructor(private stateService: StateManager) {
     super();
+  }
 
-    this.showLoader()
+  loaderWithDelay() {
+    this.showLoader();
 
-    effect(() => {
-      console.log('state changed', this.stateService.appState());
-    });
+    setTimeout(() => this.hideLoader(), 3000)
   }
 
 }

@@ -10,7 +10,7 @@ export class BaseComponent {
   }
 
   hideLoader() {
-    this.stateManager.setState({isLoading: true})
+    this.stateManager.setState({isLoading: false})
   }
 
 }
