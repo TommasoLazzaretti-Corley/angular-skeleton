@@ -2,4 +2,9 @@
 
   <app-button (onClickEvent)="showLoader()"> START LOADING</app-button>
 
+  <div style="padding: 15px">
+    <app-button (onClickEvent)="login()" *ngIf="!isAuthenticated()"> LOGIN </app-button>
+    <app-button (onClickEvent)="logout()" *ngIf="isAuthenticated()"> LOGOUT </app-button>
+  </div>
+
 </div>

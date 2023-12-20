@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { HeaderComponent } from "./organism/header/header.component";
 import { FooterComponent } from "./organism/footer/footer.component";
 import { LoaderComponent } from "./atoms/loader/loader.component";
