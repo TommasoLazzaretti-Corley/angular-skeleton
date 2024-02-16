@@ -8,6 +8,7 @@ import { ModalComponent } from "./molecules/modal/modal.component";
 import { LottieAnimationComponent } from './atoms/lottie-animation/lottie-animation.component';
 import { LottieComponent } from "ngx-lottie";
 import { ButtonComponent } from "./atoms/button/button.component";
+import { TranslateModule } from "@ngx-translate/core";
 
 const exportedComponents = [
   HeaderComponent,
@@ -36,6 +37,7 @@ const exportedModules = [
   exports: [
     ...exportedComponents,
     ...exportedModules,
+    TranslateModule
   ],
   providers: [],
 })
